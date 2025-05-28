@@ -42,7 +42,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "5mb",
+                  "maximumWarning": "2mb",
                   "maximumError": "6mb"
                 },
                 {
@@ -74,7 +74,15 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "DUGC:build:production"
+              "browserTarget": "DUGC:build:production",
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sourceMap": false,
+                  "extractCss": true,
+                  "namedChunks": false,
+                  "aot": true,
+                  "buildOptimizer": true,
+                  "vendorChunk": false
             },
             "development": {
               "browserTarget": "DUGC:build:development"
